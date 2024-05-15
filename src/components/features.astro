@@ -57,20 +57,18 @@ const features: Array<FeatureItem> = [
 ---
 
 <ContentSection title="Shop by Category" id="features">
-  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
     {
       features.map(({ title, description, icon, image }) => (
-        <li class="flex flex-col items-center bg-white rounded-lg shadow-md p-6">
-          <div class="size-16 rounded-full border-2 border-current p-3 mb-4">
-            <Icon name={icon} class="size-full" />
-          </div>
+        <li class="flex flex-col items-center bg-white rounded-lg shadow-md p-1">
           <Image
-            class="w-full rounded-lg mb-4"
+            class="w-full rounded-lg mb-1"
             src={image}
+            style="transform: rotate(-180deg);"
             widths={[200, 400, 600, 800, 1000]}
             sizes="100vw"
             loading="eager"
-            alt="A floating astronaut in a space suit"
+            alt="illustration"
           />
           <p class="text-center font-extrabold text-xl">{title}</p>
           <p class="text-center text-offset text-sm">{description}</p>
